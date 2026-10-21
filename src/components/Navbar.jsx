@@ -6,7 +6,7 @@ function Navbar() {
     <>
       <header className="nav">
         <Link to="/" className="nav-brand">
-          Waypoint
+          TripBanao
         </Link>
         <nav className="nav-links">
           <NavLink to="/plan">Plan trip</NavLink>

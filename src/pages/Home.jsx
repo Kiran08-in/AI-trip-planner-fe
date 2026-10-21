@@ -1,56 +1,47 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react'
+import { useNavigate, Link } from 'react-router-dom'
 
-const EXAMPLES = [
-  { city: "Goa", detail: "4 days, ₹50,000, beaches and food" },
-  { city: "Jaipur", detail: "3 days, ₹15,000, forts and markets" },
-  { city: "Manali", detail: "5 days, ₹25,000, mountains and cafes" },
-];
 function Home() {
-  const [city, setCity] = useState("");
-  const navigate = useNavigate();
+  const [city, setCity] = useState('')
+  const navigate = useNavigate()
 
-  const goToPlan = (name) => {
-    const q = name.trim();
-    navigate(q ? `/plan?city=${encodeURIComponent(q)}` : "/plan");
-  };
+  const goToPlan = () => {
+    const q = city.trim()
+    navigate(q ? `/plan?city=${encodeURIComponent(q)}` : '/plan')
+  }
+
   return (
-    <>
-      <h1>Welcome to the Home Page</h1>
-      <main className="page">
-        <h1 className="hero-title">Plan a trip that fits your budget</h1>
-        <p className="hero-text">
-          Tell us the city, the days and the money you have. We find real
-          places, check the weather, and group them so you spend less time on
-          the road.
-        </p>
+    <div className="land">
+      <header className="land-nav">
+        <span className="land-brand">TripBanao</span>
+        <Link to="/plan" className="btn">Get started</Link>
+      </header>
 
-        <div className="search">
+      <section className="land-hero">
+        <h1>Plan a trip that fits your budget</h1>
+        <p>
+          Tell us the city, the days and the money you have. We find real places,
+          check the weather and group them so you spend less time on the road.
+        </p>
+        <div className="searchbox">
           <input
-            className="input"
-            placeholder="Where do you want to go?"
-            aria-label="Destination"
+            placeholder="Which city do you want to visit?"
+            aria-label="City"
             value={city}
             onChange={(e) => setCity(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && goToPlan(city)}
+            onKeyDown={(e) => e.key === 'Enter' && goToPlan()}
           />
-          <button className="btn" onClick={() => goToPlan(city)}>
-            Plan my trip
-          </button>
+          <button className="btn" onClick={goToPlan}>Plan my trip</button>
         </div>
-        <section className="examples" aria-label="Example trips">
-          {EXAMPLES.map((ex) => (
-            <button
-              key={ex.city}
-              className="example"
-              onClick={() => goToPlan(ex.city)}>
-              <strong>{ex.city}</strong>
-              <span>{ex.detail}</span>
-            </button>
-          ))}
-        </section>
-      </main>
-    </>
-  );
+      </section>
+
+      <footer className="land-feats">
+        <span>Real places from map data</span>
+        <span>Weather for each day</span>
+        <span>A cost range, not a guess</span>
+      </footer>
+    </div>
+  )
 }
-export default Home;
+
+export default Home

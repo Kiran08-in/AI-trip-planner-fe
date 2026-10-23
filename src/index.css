@@ -143,3 +143,12 @@ a.btn { display: inline-block; text-decoration: none; }
 @media (max-width: 760px) {
   .grid2 { grid-template-columns: 1fr; }
 }
+
+.errbox { margin-top: 14px; background: var(--red-soft); border: 1px solid var(--red); border-radius: 12px; padding: 12px 14px; }
+.steps { list-style: none; margin: 12px 0 0; padding: 0; }
+.steps li { display: flex; align-items: center; gap: 10px; padding: 5px 0; color: var(--muted); }
+.steps li.done, .steps li.now { color: var(--text); }
+.steps li.now { font-weight: 700; }
+.dot { width: 14px; height: 14px; border-radius: 50%; border: 3px solid var(--border); flex: none; }
+.steps li.done .dot { background: var(--green); border-color: var(--green); }
+.steps li.now .dot { border-color: var(--blue); }

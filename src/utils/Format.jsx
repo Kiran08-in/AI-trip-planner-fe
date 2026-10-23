@@ -5,3 +5,7 @@ export function fmtDate(d) {
     month: 'short',
   })
 }
+
+export function rupee(n) {
+  return '₹' + n.toLocaleString('en-IN')
+}

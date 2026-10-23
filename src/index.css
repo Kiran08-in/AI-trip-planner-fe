@@ -166,3 +166,16 @@ a.btn { display: inline-block; text-decoration: none; }
 .pcard { display: flex; gap: 12px; align-items: center; background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 10px; }
 .thumb { width: 52px; height: 52px; border-radius: 10px; background: var(--blue-soft); color: var(--blue); display: flex; align-items: center; justify-content: center; flex: none; }
 .note { background: var(--amber-soft); border-radius: 10px; padding: 10px 12px; margin-bottom: 14px; font-size: 14px; }
+
+.stack { display: flex; flex-direction: column; gap: 14px; }
+.row { display: flex; align-items: center; gap: 8px; }
+.cost-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; flex-wrap: wrap; }
+.vpill { padding: 3px 12px; border-radius: 999px; font-weight: 700; font-size: 13px; }
+.v-bad { background: var(--red-soft); color: var(--red); }
+.v-mid { background: var(--amber-soft); color: #8a5d00; }
+.v-good { background: var(--green-soft); color: #0f7a50; }
+.track { position: relative; height: 12px; background: var(--border); border-radius: 999px; margin: 34px 0 8px; }
+.rng { position: absolute; top: 0; bottom: 0; background: var(--blue); border-radius: 999px; }
+.mk { position: absolute; top: -8px; bottom: -8px; width: 4px; background: var(--navy); border-radius: 2px; }
+.mk span { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 12px; font-weight: 700; padding-bottom: 2px; }
+.scale { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }

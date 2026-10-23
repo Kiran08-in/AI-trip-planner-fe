@@ -5,6 +5,7 @@ import PlaceCard from "../components/PlaceCard";
 import { fmtDate } from "../utils/Format";
 import CostCard from "../components/CostCard";
 import PackingCard from "../components/PackingCard";
+import MapView from '../components/MapView'
 
 const TABS = [
   ["itinerary", "Itinerary"],
@@ -83,11 +84,7 @@ function Itinerary() {
           ))}
         </div>
       )}
-      {tab === "map" && (
-        <div className="card">
-          <p className="muted">The map comes in a later step.</p>
-        </div>
-      )}
+      {tab === 'map' && <MapView key={day.day} places={day.places} />}
       {tab === "details" && (
         <div className="stack">
           <CostCard cost={cost} />

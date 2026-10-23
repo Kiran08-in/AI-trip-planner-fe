@@ -179,3 +179,13 @@ a.btn { display: inline-block; text-decoration: none; }
 .mk { position: absolute; top: -8px; bottom: -8px; width: 4px; background: var(--navy); border-radius: 2px; }
 .mk span { position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%); white-space: nowrap; font-size: 12px; font-weight: 700; padding-bottom: 2px; }
 .scale { display: flex; justify-content: space-between; font-size: 13px; color: var(--muted); }
+
+.mapwrap { display: grid; grid-template-columns: 1.6fr 1fr; gap: 14px; }
+.map { height: 380px; border-radius: 14px; overflow: hidden; border: 1px solid var(--border); }
+.map .leaflet-container { height: 100%; width: 100%; }
+.kpi { font-size: 26px; font-weight: 800; }
+.pin span { display: flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 50%; background: var(--blue); color: #fff; font-weight: 700; border: 3px solid #fff; box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3); }
+
+@media (max-width: 760px) {
+  .mapwrap { grid-template-columns: 1fr; }
+}

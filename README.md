@@ -2,7 +2,7 @@
 
 TripBanao builds a day by day trip plan from a city name. This is the React frontend: you enter a city, the number of days, and a budget, and it shows the plan with the weather, places on a map, a packing list, and an estimated cost range.
 
-Backend repo: https://github.com/Kiran08-in/your-backend-repo
+Backend repo: https://github.com/Kiran08-in/ai-trip-planner-be
 
 ## Screenshots
 ![landing page](image.png)

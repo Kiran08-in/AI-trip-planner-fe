@@ -189,3 +189,16 @@ a.btn { display: inline-block; text-decoration: none; }
 @media (max-width: 760px) {
   .mapwrap { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 760px) {
+  .main { padding: 14px; }
+  .side-brand { white-space: nowrap; padding: 0 10px; }
+  .side a { white-space: nowrap; }
+  .land-nav, .land-feats { padding-left: 18px; padding-right: 18px; }
+  .land-hero { padding: 36px 18px 0; }
+  .searchbox { flex-direction: column; }
+  .searchbox .btn { width: 100%; }
+  .stop { grid-template-columns: 46px 1fr; }
+  .map { height: 300px; }
+  h2 { font-size: 22px; }
+}
